@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+	
+	<div class="wrapper">
+		<div class="container-fluid">
+
+			<div class="panel" id="panel">
+
+				<div class="card">
+					<div class="card-body">
+						<div id="clock">
+							<h1><span id="hours">0</span> : <span id="minutes">0</span> : <span id="seconds">0</span></h1>
+						</div>
+					</div>
+				</div>
+
+				<div id="alarm-set">
+					<button class="btn btn-info form-group" data-form="time">Установить будильник на определенное время</button>
+					<button class="btn btn-info form-group" data-form="interval">Установить будильник через n минут</button>
+				</div>
+
+
+				<div id="forms">
+					<form class="form" id="interval" style="display: none">
+						<div class="form-group">
+							<input type="number" min="1" class="form-control">
+						</div>
+						<div class="form-group">
+							<button class="btn btn-success btn-set">Установить</button>
+						</div>
+					</form>
+
+					<form class="form" id="time" style="display: none">
+						<div class="form-group">
+							<input type="time" step="1" class="form-control">
+						</div>
+						<div class="form-group">
+							<button class="btn btn-success btn-set">Установить</button>
+						</div>
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="notify.min.js"></script>
+
+<script src="Alarm.js"></script>
+<script src="ClockManager.js"></script>
+<script src="script.js"></script>
+
+</html>
