@@ -15,5 +15,8 @@ class Alarm
 	goOff() 
 	{
 		utils.alarmGoOffNotification(`${this.hours}:${this.minutes}:${this.seconds}`);
+		
+		let audio = new Audio('audio/alarm.mp3');
+		audio.play();
 	}
 }
